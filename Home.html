@@ -14,15 +14,22 @@
     <title>Festival du cinema</title>
 </head>
 <body>
-<!-- nav bar menu fixe-->
     <nav>
         <div class="nav-wrapper orange lighten-2">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <a href="Home.html" class="brand-logo right"><i class="large material-icons">home</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a class="btn"><i class="arrowleft material-icons">menu</i></a></li>
                 <li><a href="Film.html">Films</a></li>
                 <li><a href="News.html">News</a></li>
                 <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="Home.html" class="brand-logo right"><i class="large material-icons">home</i></a></li>
+                <li><a href="Film.html">Films</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a class="btn"><i class="arrowleft material-icons">menu</i></a></li>
             </ul>
         </div>
     </nav>
@@ -100,7 +107,7 @@
                             <h3 class="header center">Prochaine diffusion</h3>
                         </span>
                         <div class="card-image">
-                            <img class="first_img" src="https://i.ytimg.com/vi/yMV61J4KMbY/maxresdefault.jpg">
+                            <img class="first_img" src="https://www.ecranlarge.com/media/cache/637x252/uploads/articles/000/000/000/the-amazing-spider-man-le-destin-d-un-heros-photo-black-cat-981274-large.jpg">
                         </div>
                         <div class="card-action brown lighten-3">
                             <a class="center" style="color:white;" href="Film.html">More</a>
@@ -153,9 +160,12 @@
 <!-- footer-->
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(function () {
+
+        $(".button-collapse").sideNav();
+
 
         var columnright = $('.columnright');
         var columnleft = $('.columnleft');

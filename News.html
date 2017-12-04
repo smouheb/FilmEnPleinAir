@@ -14,11 +14,17 @@
         <title>News</title>
     </head>
     <body>
-    <!-- nav bar menu fixe-->
         <nav>
             <div class="nav-wrapper orange lighten-2">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <a href="Home.html" class="brand-logo right"><i class="large material-icons">home</i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="Film.html">Films</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="Home.html" class="brand-logo right"><i class="large material-icons">home</i></a></li>
                     <li><a href="Film.html">Films</a></li>
                     <li><a href="News.html">News</a></li>
                     <li><a href="Contact.html">Contact</a></li>
@@ -29,7 +35,7 @@
         </div>
         <div class="row first_img grey lighten-2">
             <div class="columnleft col offset-l2 s10 brown lighten-3">
-                <h4 class="center titlenews">Latest news</h4>
+                <h1 class="center titlenews">Latest news</h1>
                 <div class="col s12">
                     <div class="col s10">
                         <div class="card brown lighten-4">
@@ -157,9 +163,11 @@
             </div>
         </footer>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript">
             $(function () {
+                $(".button-collapse").sideNav();
+
                 $('.showtext').on('click', function () {
                     $(this).closest('.card-content').find('.textshow').toggle();
                 })
