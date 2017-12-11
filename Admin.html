@@ -31,29 +31,37 @@
                 </ul>
             </div>
         </nav>
-        <section class="row"></section>
+        <section class="row">
+            <h1 class="header center ">Add News</h1>
+        </section>
         <section class="row">
             <div class="col col-offset s3">
             </div>
             <form class="col s9">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Prénom" id="first_name" type="text" class="validate" required>
+                        <input placeholder="Titre" id="Title" type="text" class="validate" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Nom" id="last_name" type="text" class="validate" required>
+                        <input type="text" class="datepicker">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="file-field input-field col s6">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Email" id="email" type="email" class="validate" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <textarea placeholder="Message" id="textarea6" class="materialize-textarea" required></textarea>
+                        <textarea placeholder="Enter News" id="textarea6" class="materialize-textarea" required></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -120,7 +128,16 @@
 
                 $('.showtext').on('click', function () {
                     $(this).closest('.card-content').find('.textshow').toggle();
-                })
+                });
+
+                $('.datepicker').pickadate({
+                    selectMonths: true, // Creates a dropdown to control month
+                    selectYears: 15, // Creates a dropdown of 15 years to control year,
+                    today: 'Today',
+                    clear: 'Clear',
+                    close: 'Ok',
+                    closeOnSelect: false // Close upon selecting a date,
+                });
             })
         </script>
     </body>
